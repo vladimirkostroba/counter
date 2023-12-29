@@ -31,8 +31,10 @@ function startToChangeColor(){
 } 
 
 function stopToChangeColor(){
-    clearInterval(intervalId);
-    isActive = null;
+    if(isActive){
+        clearInterval(intervalId);
+        isActive = null;
+    }
 }
 
 
