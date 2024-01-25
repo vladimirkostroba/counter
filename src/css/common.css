@@ -1,8 +1,12 @@
+/* @import './menu.css'; */
+
 * {
   box-sizing: border-box;
 }
 
 body {
+  padding: 0;
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -11,10 +15,185 @@ body {
   color: #212121;
   line-height: 1.5;
   
-       
+  background-image: url(../images/istockphoto-1146974104-612x612.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 img {
   display: block;
   max-width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  padding: 0;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+p{
+  padding: 0;
+  margin: 0;
+}
+
+input{
+  width: 300px;
+  height: 40px;
+  font-size: 16px;
+}
+
+section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+
+
+
+/*  */
+.go-back{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+/*  */
+
+.menu{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.menu__item > a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  
+  font-weight: 500;
+
+  width: 200px;
+  height: 200px;
+
+  border: 1px #e5d8d8 solid;
+  border-radius: 5px;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+
+  transition: all 250ms linear;
+  cursor: pointer;
+}
+
+.menu__item > a:hover {
+  transform: scale(1.05);
+  color: #fff;
+  background-color: #000;
+  opacity: 0.4;
+}
+
+/* color-switcher */
+.box{
+  width: 200px;
+  height: 200px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  border: 1px #d3c8c8 solid;
+  border-radius: 50%;
+  margin-top: 20px;
+  background-color: #fff;
+}
+
+
+.switchers{
+  display: block;
+}
+
+
+/* timer */
+
+.timer {
+  margin-top: 30px;
+  display: flex;
+  align-items: start;
+  gap: 30px;
+
+}
+
+.field > span {
+  font-size: 30px;
+}
+
+.timer-button {
+  width: 80px;
+  height: 40px;
+}
+
+/* promises */
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+
+
+.form > button {
+  width: 200px;
+  height: 40px;
+}
+
+/*  */
+
+
+
+/* CSS */
+.button-13 {
+  background-color: #fff;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: #0f1111;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Amazon Ember",sans-serif;
+  font-size: 13px;
+  line-height: 29px;
+  padding: 0 10px 0 11px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: 100px;
+}
+
+.button-13:hover {
+  background-color: #f7fafa;
+}
+
+.button-13:focus {
+  border-color: #008296;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  outline: 0;
 }

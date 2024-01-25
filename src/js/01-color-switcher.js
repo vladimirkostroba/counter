@@ -1,7 +1,11 @@
+import { Notify } from "notiflix";
+
 const refs = {
     start:document.querySelector('.js-start'),
     stop:document.querySelector('.js-stop'),
+    box:document.querySelector('.box'),
 }
+
 
 let isActive = null;
 
@@ -20,13 +24,13 @@ function getRandomHexColor() {
 
 function startToChangeColor(){
     if(isActive){
-        console.log('no');
+        Notify.failure('Switch active')
         return
     }
 
    intervalId =  setInterval(() => {
         isActive = true;
-        document.body.style.backgroundColor = getRandomHexColor();
+        refs.box.style.backgroundColor = getRandomHexColor();
     }, 1000);
 } 
 
@@ -34,6 +38,7 @@ function stopToChangeColor(){
     if(isActive){
         clearInterval(intervalId);
         isActive = null;
+        Notify.success('The switch has been stopped')
     }
 }
 
