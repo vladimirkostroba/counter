@@ -1,5 +1,3 @@
-/* @import './menu.css'; */
-
 * {
   box-sizing: border-box;
 }
@@ -64,11 +62,28 @@ section{
   width: 100vw;
   height: 100vh;
 }
+
 /*  */
 .go-back{
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top: 20px;
   left: 20px;
+  width: 200px;
+
+}
+
+.go-back::before{
+  display: block;
+  content: "";
+  width: 100px;
+  height: 40px;
+  background-image: url(../images/go-back.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 /*  */
 
@@ -131,6 +146,7 @@ section{
   margin-top: 30px;
   display: flex;
   align-items: start;
+  gap: 50px;
 }
 
 .field > span {
@@ -160,7 +176,6 @@ section{
 }
 
 
-
 .form > button {
   width: 200px;
   height: 40px;
@@ -168,9 +183,6 @@ section{
 
 /*  */
 
-
-
-/* CSS */
 .button-13 {
   background-color: #fff;
   border: 1px solid #d5d9d9;
@@ -204,77 +216,5 @@ section{
   outline: 0;
 }
 
-/*  */
 
-.go-back {
-  display: block;
-  position: relative;
-  width: 56px;
-  height: 56px;
-  margin: 0;
-  overflow: hidden;
-  outline: none;
-  background-color: transparent;
-  cursor: pointer;
-  border: 0;
-}
 
-.go-back:before,
-.go-back:after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  inset: 7px;
-}
-
-.go-back:before {
-  border: 4px solid #f0eeef;
-  transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
-    transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
-}
-
-.go-back:after {
-  border: 4px solid #96daf0;
-  transform: scale(1.3);
-  transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
-    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  opacity: 0;
-}
-
-.go-back:hover:before,
-.go-back:focus:before {
-  opacity: 0;
-  transform: scale(0.7);
-  transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
-    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.go-back:hover:after,
-.go-back:focus:after {
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
-    transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
-}
-
-.go-back-box {
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.go-back-elem {
-  display: block;
-  width: 20px;
-  height: 20px;
-  margin: 17px 18px 0 18px;
-  transform: rotate(180deg);
-  fill: #f0eeef;
-}
-
-.go-back:hover .go-back-box,
-.go-back:focus .go-back-box {
-  transition: 0.4s;
-  transform: translateX(-56px);
-}
